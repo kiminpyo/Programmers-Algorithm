@@ -1,25 +1,37 @@
 function solution(answers) {
     
-    const answer = [];
-    const firstPerson = [1, 2, 3, 4, 5];
-    const secondPerson = [2, 1, 2, 3, 2, 4, 2, 5];
-    const thirdPerson = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
-    const correctNum = [0, 0, 0];
-  
-    for (let i = 0; i < answers.length ; i++) {
-      if (answers[i] === firstPerson[i % firstPerson.length]) correctNum[0] += 1;
-      if (answers[i] === secondPerson[i % secondPerson.length]) correctNum[1] += 1;
-      if (answers[i] === thirdPerson[i % thirdPerson.length]) correctNum[2] += 1;
-    }
-  
-    const maxScore = Math.max(...correctNum);
-    console.log(maxScore)
-    console.log(correctNum)
-    for( let i = 0; i <3 ; i++){
-        if(correctNum[i] === maxScore) {
-            answer.push(i+1)
-        }
-    }
-    console.log(answer)
-    return answer;
+  if(answers.length < 1) {
+      return answers = []
   }
+  const result  =[]
+
+  const arr1  =[1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
+  
+  const arr2 = [ 2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3, 2, 4, 2, 5]
+  const arr3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
+  const score = [0,0,0]
+  
+  for(let i = 0 ; i < answers.length; i++){
+
+      if(answers[i] ===  arr1[i % arr1.length]  ) score[0] += 1;
+      if(answers[i] ===  arr2[i % arr2.length]) score[1] += 1;
+      if(answers[i] === arr3[i % arr3.length]) score[2] += 1;
+  }
+
+  const newScore = [...score];
+  const maxScore = Math.max(...score);
+
+  
+  for(let i = 0 ; i < 3 ; i ++){
+      console.log(newScore)
+      console.log(maxScore)
+      if(newScore[i] === maxScore) result.push(i + 1)
+      console.log(result)
+  }
+      
+ console.log(result)
+
+ 
+  return result;
+}
+solution([1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5])
