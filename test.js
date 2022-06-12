@@ -1,36 +1,40 @@
-let foo = {
-    name : "kim",
-    age : 20
+function solution(s) {
+    var answer = 0;
+    return answer;
 }
+const answer=[]
+const  result = []
+const arr= ['zero','one','two','three','four','five','six','seven','eight','nine']
+const string = "1two3four3four55sixsixsixsix"
+const numArr = string.replace(/[^0-9]/g, '')
+console.log(numArr)
+const stringArr = string.replace(/[^a-z]/g, ' ') //문자열로 변환
 
-for(let value in foo){
-    console.log(value)
-    console.log(foo[value])
-}
-for(let value of Object.keys(foo)){
-    console.log(value)
+
+console.log(stringArr)
+console.log(string)
+console.log(stringArr.split(' '))
+
+for(let i = 0; i < stringArr.split('').length; i++){
+        
+   const stringAns = arr.filter((v)=> v ===  stringArr.split(' ')[i])
+    console.log("stringAns"+stringAns)
    
+ answer.push(stringAns)
+ 
+    console.log("answer"+ answer)
+}
+
+console.log(answer)
+for(let j = 1 ; j <answer.length ; j++){
+ 
+    
+   const stringToNum = arr.indexOf(answer[j][0])
+   console.log(stringToNum)
+ 
+    result.push(parseInt(stringToNum))
+    
 }
 
 
-const goo = [3,5,1,2,4]
-console.log(goo.forEach((i)=>{
-
-    let arrA = i * i;
-    console.log(arrA)
-    goo.unshift(arrA)
-    console.log(goo)
-}))
-console.log("goo" + goo)
-const arr = [];
-for(let i in goo){
-    for(let j in goo){
-        const a = i * j;
-        arr.push(a)
-    }
-}
-console.log(arr)
-for(let item of goo){
-     console.log(item) 
-}
 
