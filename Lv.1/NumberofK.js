@@ -4,7 +4,7 @@ const array = [1, 5, 2, 6, 3, 7, 4]
 
 function solution(array, commands) {
     
-    var answer = [];
+    const answer = [];
     return answer;
 }
 console.log(array.slice(i-1,j).sort())
