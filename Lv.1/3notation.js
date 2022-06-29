@@ -20,6 +20,7 @@ const a = [1,2,3,4]
 const b= ['1','2','3','4']
 const ato = a.map(Number)
 const bto = b.map(Number)
+console.log(typeof ato[0]) // 전부 number
 console.log(typeof bto[0]) // 전부 number
 console.log(typeof cto[0]) // 전부 string
 const c= "1,2,3,4";
