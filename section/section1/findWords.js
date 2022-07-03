@@ -10,6 +10,8 @@ function solution(word,a){
     const exceptC = word.replace(arg,"") //c를 제외한 나머지 추출
     const result = word.length- exceptC.length //전체 길이에서 c를 제외한 길이 뺌
     console.log("c의 길이 ==>"+ result)    
+    
+    
     //match함수 이용 (배열을 리턴한다.)
     const result1 = word.match(arg) //[ 'C', 'C', 'C', 'C', 'C', 'C' ]
     console.log(result1.length + "<== c의 개수")
