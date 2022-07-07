@@ -1,3 +1,4 @@
+//못풀었다.
 function solution(num,rank){
     const order= rank.sort((a,b)=> b-a)
     console.log(order)
